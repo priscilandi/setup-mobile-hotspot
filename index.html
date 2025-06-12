@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KBA: How to Add a Printer in Windows</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        /* Styles for the accordion functionality */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+        }
+
+        .accordion-button.open + .accordion-content {
+            max-height: 1000px; /* Increased height for more content */
+            padding-top: 1rem;
+            padding-bottom: 1.25rem;
+        }
+
+        .accordion-button .fa-chevron-down {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .accordion-button.open .fa-chevron-down {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <div class="container mx-auto p-4 sm:p-6 md:p-8 max-w-4xl">
+        <!-- Header -->
+        <header class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-900">How to Add a Printer in Windows</h1>
+        </header>
+
+        <!-- Objective & Prerequisites --> 
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+            <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+                <h2 class="text-lg font-semibold text-gray-900 mb-3 flex items-center">
+                    <i class="fas fa-bullseye mr-3 text-blue-500"></i> Objective
+                </h2>
+                <p class="text-gray-600">To successfully add a network printer or install a new local (USB/Wi-Fi) printer on a Windows computer.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+                <h2 class="text-lg font-semibold text-gray-900 mb-3 flex items-center">
+                    <i class="fas fa-list-check mr-3 text-blue-500"></i> Prerequisites
+                </h2>
+                <ul class="list-disc list-inside text-gray-600 space-y-1">
+                    <li>For Network Printer: Network access & server name.</li>
+                    <li>For New Printer: Printer with cables or Wi-Fi details.</li>
+                    <li>Administrator credentials may be required.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Steps Accordion -->
+        <div class="space-y-4">
+            <!-- Step 1: Network Printer -->
+            <div class="bg-white rounded-lg border border-gray-200 shadow-sm">
+                <button class="accordion-button w-full flex justify-between items-center text-left p-5 font-semibold text-gray-700 hover:bg-gray-50 rounded-lg">
+                    <span class="flex items-center"><i class="fas fa-network-wired w-6 text-center mr-3 text-lg text-blue-500"></i> Option A: Add a Network Printer</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="accordion-content px-5 text-gray-600">
+                    <p class="mb-4">Use this method for office printers already available on a server.</p>
+                    <ol class="list-decimal list-inside space-y-3 pl-4 border-l-2 border-blue-200">
+                        <li>Open <strong>File Explorer</strong>.</li>
+                        <li>In the address bar, type the server path <code class="bg-gray-200 text-gray-800 px-1.5 py-0.5 rounded-md text-sm">\\spsua00</code> and press <strong>Enter</strong>.</li>
+                        <li>Find your printer in the list and <strong>double-click</strong> it to install.</li>
+                        <li>If prompted for credentials, contact your IT department for assistance.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Step 2: New Printer -->
+            <div class="bg-white rounded-lg border border-gray-200 shadow-sm">
+                <button class="accordion-button w-full flex justify-between items-center text-left p-5 font-semibold text-gray-700 hover:bg-gray-50 rounded-lg">
+                    <span class="flex items-center"><i class="fas fa-print w-6 text-center mr-3 text-lg text-blue-500"></i> Option B: Install a New Printer</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="accordion-content px-5 text-gray-600">
+                    <div class="space-y-6 pl-4 border-l-2 border-blue-200">
+                        <div>
+                            <h3 class="font-semibold text-gray-700 mb-2">1. Connect and Power On the Printer</h3>
+                            <ul class="list-disc list-outside ml-5 space-y-2">
+                                <li><strong>USB Printer:</strong> Connect the USB cable from the printer to your computer and turn the printer on. Windows will attempt to set it up automatically.</li>
+                                <li><strong>Wi-Fi Printer:</strong> Use the printer's display menu to connect it to your Wi-Fi network first. You will need your Wi-Fi name and password.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-700 mb-2">2. Add the Printer in Windows</h3>
+                            <ul class="list-disc list-outside ml-5 space-y-2">
+                                <li>Go to <strong>Settings > Bluetooth & devices > Printers & scanners</strong>.</li>
+                                <li>Click the <strong>Add device</strong> button.</li>
+                                <li>Wait for your printer to appear in the list, then click <strong>Add device</strong> next to its name.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-700 mb-2">3. Install Driver (If Needed)</h3>
+                            <p class="mb-2">If the printer doesn't work, you may need to install a driver. The best method is to visit the <strong>printer manufacturer's support website</strong> (e.g., HP, Canon, Epson), search for your model, and download the recommended software.</p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-700 mb-2">4. Print a Test Page</h3>
+                            <ul class="list-disc list-outside ml-5 space-y-2">
+                                <li>In <strong>Printers & scanners</strong>, click on your printer.</li>
+                                <li>Select <strong>Printer properties</strong>, then click <strong>Print Test Page</strong>. If it prints, the setup is complete.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Completion Message -->
+        <div class="mt-8 bg-green-100 border-l-4 border-green-500 text-green-700 p-4 rounded-r-lg" role="alert">
+            <p class="font-bold">Process Complete</p>
+            <p>Your printer should now be configured and ready for use.</p>
+        </div>
+    </div>
+
+    <!-- JavaScript for accordion functionality -->
+    <script>
+        const accordionButtons = document.querySelectorAll('.accordion-button');
+        accordionButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // This script allows only one accordion to be open at a time.
+                const isOpening = !button.classList.contains('open');
+
+                // Close all other open accordions
+                accordionButtons.forEach(otherButton => {
+                    otherButton.classList.remove('open');
+                });
+
+                // Open the clicked accordion if it wasn't already open
+                if (isOpening) {
+                    button.classList.add('open');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
